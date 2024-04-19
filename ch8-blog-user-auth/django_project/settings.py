@@ -159,3 +159,8 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # new
 
 SITE_ID = 1  # new
+
+REST_AUTH = { # new cause of dj_rest_auth
+    'SESSION_LOGIN': False,
+}
+
