@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List with Vue 3 and Axios</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Todo List</h1>
+    <ul>
+      <li v-for="todo in todos" :key="todo.id">
+        <h3>{{ todo.title }}</h3>
+        <p>{{ todo.body }}</p>
+      </li>
+    </ul>
+    <p v-if="todos.length === 0">Loading todos...</p>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          todos: []
+        };
+      },
+      created() {
+        this.fetchTodos();
+      },
+      methods: {
+        fetchTodos() {
+          axios.get('http://127.0.0.1:8000/api/')
+            .then(response => {
+              this.todos = response.data;
+            })
+            .catch(error => {
+              console.error('Error fetching todos:', error);
+            });
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

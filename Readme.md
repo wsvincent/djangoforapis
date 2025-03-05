@@ -1,5 +1,5 @@
-The official source code for [Django for APIs](https://djangoforapis.com). Available as an [ebook](https://gum.co/EzsI) or [paperback](https://www.amazon.com/dp/1735467227/?tag=wsvincent-20).
+The official source code for [Django for APIs](https://learndjango.com/courses/django-for-apis/). Available as a [course on LearnDjango.com](https://learndjango.com/courses/django-for-apis/). Paperback edition coming soon.
 
-![Cover](cover.jpg)
+![Cover](title_page.jpg)
 
-If you have the 3.1 version, please refer to [this repo for the source code](https://github.com/wsvincent/djangoforapis_31).
+If you have the 4.0 version, please refer to [this repo for the source code](https://github.com/wsvincent/djangoforapis_40).

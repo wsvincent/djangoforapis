@@ -4,3 +4,4 @@ __pycache
 .git
 .vscode
 node_modules
+db.sqlite3
